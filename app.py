@@ -15,7 +15,8 @@ async def main():
 
 if __name__ == '__main__':
     import asyncio
+    from data.db.base import engine
+    from data.db import models
 
+    models.Base.metadata.create_all(bind=engine)
     asyncio.run(main())
-
-

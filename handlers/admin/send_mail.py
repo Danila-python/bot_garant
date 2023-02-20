@@ -4,7 +4,7 @@ from aiogram.filters import Command
 from aiogram.fsm.context import FSMContext
 
 from data.config import admins_id
-from data.states.mail_states import Mail
+from data.states.local_states import Mail
 from data.config import clients_id
 
 from utils.midlware.midlware_admin import AdminMessageMiddleware
