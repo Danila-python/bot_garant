@@ -7,7 +7,6 @@ from sqlalchemy.orm import Session
 
 
 from data.states.local_states import UserData
-from data.db.base import get_db
 
 router = Router()
 
@@ -24,7 +23,7 @@ async def start_bot(message: Message, state: FSMContext):
 ДОПИЛИТЬ ПРОВЕРКУ НОМЕРА ТЕЛЕФОНА НА ВАЛИДНОСТЬ!!!!!!!!
 """
 
-@router.message(UserData.phone)
-async def get_user_phone(message: Message, state: FSMContext, db: Session=):
-    await state.update_data(phone=message.text)
+# @router.message(UserData.phone)
+# async def get_user_phone(message: Message, state: FSMContext, db: Session=):
+#     await state.update_data(phone=message.text)
 
