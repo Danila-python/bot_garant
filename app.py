@@ -15,10 +15,6 @@ async def main():
 
 if __name__ == '__main__':
     import asyncio
-    from data.db.base import async_session
     from data.db import models
-    from data.db.base import async_session
-
-    async_session()
 
     asyncio.run(main())
