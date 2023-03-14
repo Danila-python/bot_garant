@@ -18,8 +18,8 @@ Base = declarative_base()
 class Users(Base):
     __tablename__ = "users"
 
-    user_id = Column(String, unique=True, nullable=False)
-    user_mobile_phone = Column(String, primary_key=True, nullable=False)
+    user_id = Column(String, unique=True, nullable=True)
+    user_email = Column(String, primary_key=True, nullable=False)
     active = Column(Boolean, default=True)
 
 

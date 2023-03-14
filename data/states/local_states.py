@@ -6,4 +6,4 @@ class Mail(StatesGroup):
 
 
 class UserData(StatesGroup):
-    phone = State()
+    email = State()

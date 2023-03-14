@@ -15,16 +15,17 @@ router = Router()
 @router.message(Command(commands=['start']))
 async def start_bot(message: Message, state: FSMContext):
     await message.answer(
-        'Привет, укажи свой номер телефона для авторизации!\n (В формате 8xxxxxxxxxx)'
+        'Привет, укажи свой email для авторизации!'
     )
     await state.clear()
-    await state.set_state(UserData.phone)
+    await state.set_state(UserData.email)
 
 """
 ДОПИЛИТЬ ПРОВЕРКУ НОМЕРА ТЕЛЕФОНА НА ВАЛИДНОСТЬ!!!!!!!!
 """
 
-@router.message(UserData.phone)
+
+@router.message(UserData.email)
 async def get_user_phone(message: Message, state: FSMContext):
     await state.update_data(phone=message.text)
     async with get_session() as session:
